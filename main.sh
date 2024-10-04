@@ -12,6 +12,7 @@ fi
 
 PATTERN=0
 REMOTE=0
+REMOTE_FLAG="-d"
 FORCE=0
 
 options=$(getopt --shell bash --options f --longoptions pattern,remote -- "$@")
@@ -37,6 +38,7 @@ while true ; do
 
 		-f)
 			FORCE=1
+            REMOTE_FLAG="-D"
 			shift
 			;;
 
@@ -66,7 +68,7 @@ if [ $REMOTE -eq 1 ] ; then
         format_error 1 "Invalid command format"
     fi
 
-    remote
+    remote "$REMOTE_FLAG"
     exit $?
 fi
 
