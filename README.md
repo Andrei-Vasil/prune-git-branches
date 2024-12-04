@@ -21,15 +21,3 @@ alias prune-git-branches='/path/to/this/repo/main.sh'
 prune-git-branches --remote [-f]
 prune-git-branches --pattern [branch1 branch2 branch3 ...]
 ```
-
-## Required packages
-
-- git
-- xargs
-- grep
-- awk
-- sed
-- cut
-- getopt
-- dirname
-- readlink
